@@ -2,68 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel's Manhwa/Manhua List</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script defer src="app.js"></script>
+    <title>Manhwa Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- This is standard for all pages -->
-    <h1 class="Title">
-        <a class="Homepage link" href="./index.html">
-            Daniel's Manhwa/Manhua List
-        </a>
-        <div class="wrapper">
-            <span><a class="link" href="./topmanhwa.html">Top Manhwa/Manhua</a></span>
-            <span><a class="link" href="./allmanhwa.html">All Manhwa/Manhua</a></span>
-            <span><a class="link" href="./readmanhwa.html">Read Manhwa/Manhua</a></span>
+    <header>
+        <div class="title">
+            <a href="./index.html" class="no-hover">
+                <h1>Daniel's Manhwa Website</h1>
+            </a>
         </div>
-    </h1>
-    <!-- This is standard for all pages -->
+        <nav>
+            <div id="nav-options"> 
+                <a href="./index.html">Home</a>
+                <a href="./manhwa.html">All Manhwa</a>
+                <a href="./about.html">About</a>
+                <!-- <a href="./login.php" id="login-link">Login</a>
+                <a href="./signup.php" id="signup-link">Signup</a>
+                <a href="./logout.php" id="logout-link" style="display: none;">Logout</a> -->
+            </div>
+            <a href="#" id="menu-icon">&#9776;</a>
+            <div id="dropdown-menu" style="display: none;">
+                <a id="close-button" style="display: none;">X</a>
+                <a href="./index.html">Home</a>
+                <a href="./manhwa.html">All Manhwa</a>
+                <a href="./about.html">About</a>
+                <!-- <a href="./login.php" id="login-link">Login</a>
+                <a href="./signup.php" id="signup-link">Signup</a>
+                <a href="./logout.php" id="logout-link">Logout</a> -->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="featured-manhwa">
+            <h2>Top Manhwa</h2>
+            <ul>
+                <li>
+                    <a class="box" href="./manhwa1.html">
+                        <img src="./images/lightningdegree.jpg" alt="Manhwa 1">
+                        <h3>Lightning Degree</h3>
+                        <p>Latest Chapter: 150</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="box" href="./manhwa1.html">
+                        <img src="./images/lightningdegree.jpg" alt="Manhwa 1">
+                        <h3>Lightning Degree</h3>
+                        <p>Latest Chapter: 150</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="box" href="./manhwa1.html">
+                        <img src="./images/lightningdegree.jpg" alt="Manhwa 1">
+                        <h3>Lightning Degree</h3>
+                        <p>Latest Chapter: 150</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
 
-    <h2 class="SubTitle">Homepage</h2>
-    <ul>
-        <li class="boxwithpicture"><div class="pictureandwords">
-            <a class="ListItem" href="https://returnofthemounthuasect.com/manga/return-of-the-mount-hua-sect-chapter-69/" target="_blank" rel="noopener noreferrer"><img src="./pictures/Return-of-the-mountain-hua-sect.jpg">
-                <br>Return of the Mount Hua Sect</a>
-                <br>Chapter Last Read: 69</a></div></li>
-        <li class="boxwithpicture"><div class="pictureandwords">
-            <a class="ListItem" href="https://beginningafterend.com/manga/the-beginning-after-the-end-chapter-150/" target="_blank" rel="noopener noreferrer"><img src="./pictures/tbate.jpg">
-                <br>The Beginning After the End</a>
-                <br>Chapter Last Read: 150</a></div></li>
-        <li class="boxwithpicture"><div class="pictureandwords">
-            <a class="ListItem" href="https://sololeveling-manga.net/" target="_blank" rel="noopener noreferrer"><img src="./pictures/sololeveling.jpg">
-                <br>Solo Leveling</a>
-                <br>Chapter Last Read: <p style="color: red; background-color: lightgray;">Completed</p></a></div></li>
-        <li class="boxwithpicture"><div class="pictureandwords">
-            <a class="ListItem" href="https://lightningdegree.com/manga/lightning-degree-chapter-124/""><img src="./pictures/lightningdegree.jpg">
-                <br>Lightning Degree</a>
-                <br>Chapter Last Read: 124</a></div></li>
-        <li class="boxwithpicture"><div class="pictureandwords">
-            <a class="ListItem" href="https://nano-machine.online/manga/nano-machine-chapter-5-101/"><img src="./pictures/nanomachine.jpg">
-                <br>Nanomachine</a>
-                <br>Chapter Last Read: 101</a></div></li>
-    </ul>
-
-    <div>
-        <p id="othertitle">All Manhwa: </p>
-        <ol>
-            <li><a class="LInopictures" href="https://www.google.com">Google</a></li>
-            <li><a class="LInopictures" href="https://www.google.com">Google</a></li>
-            <li><a class="LInopictures" href="https://www.google.com">Google</a></li>
-            <li><a class="LInopictures" href="https://www.google.com">Google</a></li>
-            <li><a class="LInopictures" href="https://www.google.com">Google</a></li>
-            <li><a class="LInopictures" href="https://www.google.com">Google</a></li>
-            <li><a class="LInopictures" href="https://www.google.com">Google</a></li>
-        </ol>
-    </div>
-
-
-
+        <section id="latest-chapters">
+            <h2>Latest 3 Currently Reading</h2>
+            <ul>
+                <li>
+                    <h3>Manhwa 1 Title</h3>
+                    <p>Chapter 50</p>
+                    <a href="./manhwa1-chapter50.html">Read</a>
+                </li>
+                <li>
+                    <h3>Manhwa 2 Title</h3>
+                    <p>Chapter 25</p>
+                    <a href="./manhwa2-chapter25.html">Read</a>
+                </li>
+                <li>
+                    <h3>Manhwa 3 Title</h3>
+                    <p>Chapter 75</p>
+                    <a href="./manhwa3-chapter75.html">Read</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="header.js"></script> -->
+    <script src="footer.js"></script>
+    <script>
+    $(document).ready(function(){
+        // For dropdown Menu
+        $("#menu-icon").click(function() {
+            $("#dropdown-menu").slideToggle();
+            $("#menu-icon").hide();
+        });
+        $("#dropdown-menu").mouseleave(function(){
+        $("#dropdown-menu").slideUp(function() {
+            $("#menu-icon").show();
+            });
+        });
+    });
+    </script>
 </body>
-
-
-
 </html>

@@ -1,2 +1,0 @@
-# manhwa-website
-personal manhwas
