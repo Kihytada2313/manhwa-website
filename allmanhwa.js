@@ -10,10 +10,18 @@ function Manhwa(title, href, last_chapter_read, newest_chapter, notes, rating, t
 }
   
 // Create an array of Manhwa instances
-// Format = new Manhwa("Title", "href", last_chapter_read, newest_chapter, "notes", "rating", "type")
+// Format = new Manhwa("Title", "href", last_chapter_read, newest_chapter, "notes", "rating", "rating_tag")
 var manhwas = [
-    // new Manhwa("Title", "href", "last_chapter_read", "newest_chapter", "notes", "rating", "type"),
-    
+    // new Manhwa("Title", "href", "last_chapter_read", "newest_chapter", "notes", "rating", "rating_tag"),
+    new Manhwa("I'm Stuck on the Same Day for a Thousand Years", "https://aquamanga.com/read/i-m-stuck-on-the-same-day-for-a-thousand-years/", "12", "(2/22/23): 14", "", "87", ""),
+    new Manhwa("Moon-Shadow Sword Emperor", "https://flamescans.org/series/1677063722-moon-shadow-sword-emperor/", "20", "(2/22/23): 22", "", "89", ""),
+    new Manhwa("Eternal Club", "https://realmscans.com/d1102/series/eternal-club/", "158", "158", "Cool concept, gets a bit repetitive but still interesting to see where it goes", "89", ""),
+    new Manhwa("Astral Pet Store", "https://nightscans.org/series/astral-pet-store/", "1", "(2/22/23): 45)", "", "Unknown", "unknown-rating"),
+    new Manhwa("Demon's Crest", "https://reaperscans.com/comics/2834-demons-crest", "14", "(2/22/23): 15", "SAO creater, but weird concept with children", "80", ""),
+    new Manhwa("Baek XX", "https://void-scans.com/manga/baek-xx/", "9", "(2/22/23): 11", "", "90", ""),
+    new Manhwa("I Became A Part Time Employee For Gods", "https://aquamanga.com/read/i-became-a-part-time-employee-for-gods/", "21", "newest_chapter", "(2/22/2023): 21", "90", ""),
+    new Manhwa("The Demon Prince goes to the Academy", "https://reaperscans.com/comics/4770-the-demon-prince-goes-to-the-academy", "22", "(2/22/2023): 22", "", "89", ""),
+    new Manhwa("Heavenly Grand Archive's Young Master", "https://www.asurascans.com/manga/heavenly-grand-archives-young-master/", "13", "(2/22/2023): 13", "", "88", ""),
     new Manhwa("Lurking in the City", "https://mangakakalot.com/chapter/bu924860", "140", "(2/15/2023):", "", "60", "hiatus"),
     new Manhwa("SSS-Class Gacha Hunter", "https://www.asurascans.com/manga/1672760368-sss-class-gacha-hunter/", "45", "(2/15/2023): ", "", "82", ""),
     new Manhwa("Invincible Sword Domain", "https://manhwatop.com/manga/invincible-sword-domain/", "110", "(2/15/2023): ", "", "55", ""),
@@ -27,9 +35,9 @@ var manhwas = [
     new Manhwa("Super Evolution", "https://www.asurascans.com/manga/1672760368-super-evolution/", "86", "(2/15/2023): ", "", "66", ""),
     new Manhwa("So They Prohesized, I’m the Future King", "https://aquamanga.com/read/they-say-im-the-future-king/", "0", "(2/15/2023): ", "", "0", "unread"),
     new Manhwa("I’ve Been Trapped on the Same Day for Over 3000 Years", "https://aquamanga.com/read/i-have-been-stuck-on-the-same-day-for-3000-years/", "0", "(2/15/2023): ", "", "0", "unread"),
-    new Manhwa("Infinite Mage", "https://www.asurascans.com/manga/1672760368-infinite-mage/", "21", "(2/15/2023): ", "", "95", ""),
+    new Manhwa("Infinite Mage", "https://www.asurascans.com/manga/1672760368-infinite-mage/", "25", "(2/22/2023): 25", "", "95", ""),
     new Manhwa("Monster Pet Evolution", "https://manhuaus.com/manga/monster-pet-evolution/", "22", "(2/15/2023): ", "", "68", ""),
-    new Manhwa("Pick Me Up", "https://www.asurascans.com/manga/1672760368-pick-me-up-infinite-gacha/", "22", "(2/15/2023): ", "", "94", ""),
+    new Manhwa("Pick Me Up, Infinite Gatcha", "https://www.asurascans.com/manga/1672760368-pick-me-up-infinite-gacha/", "26", "(2/23/2023): 28", "", "93", ""),
     new Manhwa("The Lazy Swordmaster" , "https://void-scans.com/manga/the-lazy-swordmaster/", "33", "(2/15/2023): ", "", "75", ""),
     new Manhwa("Tale of a Scribe Who Retires to the Countryside", "https://en.leviatanscans.com/home/manga/tale-of-a-scribe-who-retires-to-the-countryside/", "113", "(2/15/2023): ", "", "78", ""),
     new Manhwa("Memorize", "https://aquamanga.com/read/memorize/", "100", "(2/15/2023): ", "", "75", ""),
@@ -48,12 +56,12 @@ var manhwas = [
     new Manhwa("Dungeons & Artifacts", "https://www.webtoons.com/en/action/dungeons-and-artifacts/list?title_no=2575&page=1", "0", "(2/15/2023): ", "", "0", "unread"),
     new Manhwa("I’ll Be Taking a Break for Personal Reasons", "https://www.asurascans.com/manga/1672760368-ill-be-taking-a-break-for-personal-reasons/", "23", "(2/15/2023): ", "", "89", ""),
     new Manhwa("Rise from the Rubble", "https://www.asurascans.com/manga/1672760368-rise-from-the-rubble/", "129", "(2/15/2023): ", "", "77", ""),
-    new Manhwa("World’s Strongest Troll", "https://www.asurascans.com/manga/1672760368-worlds-strongest-troll/", "12", "(2/15/2023): ", "", "92", ""),
+    new Manhwa("World’s Strongest Troll", "https://www.asurascans.com/manga/1672760368-worlds-strongest-troll/", "19", "(2/22/2023): 21", "", "90", ""),
     new Manhwa("Demon Lord’s Martial Arts Ascension", "https://www.asurascans.com/manga/1672760368-demon-lords-martial-arts-ascension/", "24", "(2/15/2023): ", "", "89", ""),
-    new Manhwa("Clever Cleaning Life of the Returned Genius Hunter", "https://manhuaus.com/manga/clever-cleaning-life-of-the-returned-genius-hunter/", "23", "(2/15/2023): ", "", "90", ""),
+    new Manhwa("Clever Cleaning Life of the Returned Genius Hunter", "https://manhuaus.com/manga/clever-cleaning-life-of-the-returned-genius-hunter/", "29", "(2/22/2023): 30", "", "90", ""),
     new Manhwa("Nine Heavens Swordmaster", "https://mangabtt.com/manga/heavenly-inquisition-sword-nine-heavens-swordmaster-46676", "24", "(2/15/2023): ", "", "89", ""),
     new Manhwa("Plundering the Heavens", "https://drakescans.com/series/plundering-the-heavens2/#", "0", "(2/15/2023): ", "", "0", ""),
-    new Manhwa("I’m Not That Kind of Talent", "https://www.asurascans.com/manga/1672760368-im-not-that-kind-of-talent/", "11", "(2/15/2023): ", "", "93", ""),
+    new Manhwa("I’m Not That Kind of Talent", "https://www.asurascans.com/manga/1672760368-im-not-that-kind-of-talent/", "20", "(2/22/2023): 21", "", "93", ""),
     new Manhwa("Life of a Magic Academy Mage", "https://www.asurascans.com/manga/1672760368-life-of-a-magic-academy-mage/", "17", "(2/15/2023): ", "", "82", ""),
     new Manhwa("Reincarnation of the Murim Clan’s Former Ranker", "https://elarcpage.com/series/reincarnation-of-the-murim-clans-former-ranker/", "70", "(2/15/2023): ", "", "85", ""),
     new Manhwa("I Regressed to My Ruined Family", "https://www.asurascans.com/manga/1672760368-i-regressed-to-my-ruined-family/" , "23", "(2/15/2023): ", "", "90", ""),
@@ -65,7 +73,7 @@ var manhwas = [
     new Manhwa("Champion’s Path to Murim", "https://www.asurascans.com/manga/1672760368-champions-path-to-murim/", "22", "(2/15/2023): ", "", "89", ""),
     new Manhwa("Never Die Extra", "https://www.asurascans.com/manga/1672760368-never-die-extra/", "21", "(2/15/2023): ", "", "92", ""),
     new Manhwa("Worn and Torn Newbie", "https://www.asurascans.com/manga/1672760368-worn-and-torn-newbie/", "0", "(2/15/2023): ", "", "0", "unread"),
-    new Manhwa("Warrior High School", "https://www.asurascans.com/manga/1672760368-warrior-high-school-dungeon-raid-course/", "22", "(2/15/2023): ", "", "93", ""),
+    new Manhwa("Warrior High School", "https://www.asurascans.com/manga/1672760368-warrior-high-school-dungeon-raid-course/", "28", "(2/22/2023): 33", "", "93", ""),
     new Manhwa("Return of the Shattered Constellation", "https://www.asurascans.com/manga/1672760368-return-of-the-shattered-constellation/", "49", "(2/15/2023): ", "", "93", ""),
     new Manhwa("Archmage Transcending Through Regression", "https://www.asurascans.com/manga/1672760368-archmage-transcending-through-regression/", "25", "(2/15/2023): ", "", "89", ""),
     new Manhwa("Worthless Regression", "https://www.asurascans.com/manga/1672760368-worthless-regression/", "42", "(2/15/2023): ", "", "80", ""),
@@ -85,7 +93,7 @@ var manhwas = [
     new Manhwa("My Path to Killing Gods in Another World", "https://www.asurascans.com/manga/1672760368-my-path-to-killing-gods-in-another-world/", "0", "(2/15/2023): ", "Didn't Like on first 2 chapters read in the past", "0", ""),
     new Manhwa("Absolute Sword Sense", "https://www.asurascans.com/manga/1672760368-absolute-sword-sense/", "11", "(2/15/2023): ", "", "90", "hiatus"),
     new Manhwa("One-of-a-Kind Irregular", "https://reaperscans.com/comics/3959-one-of-a-kind-irregular", "33", "(2/15/2023): ", "", "70", ""),
-    new Manhwa("Player Who Returned 10000 Years Later", "https://www.asurascans.com/manga/1672760368-player-who-returned-10000-years-later/", "36", "(2/15/2023): ", "", "94", ""),
+    new Manhwa("Player Who Returned 10,000 Years Later", "https://www.asurascans.com/manga/1672760368-player-who-returned-10000-years-later/", "44", "(2/22/2023): 46", "", "93", ""),
     new Manhwa("Is this Hero for Real?", "https://reaperscans.com/comics/9783-is-this-hero-for-real", "40", "(2/15/2023): ", "", "Unknown", "unknown-rating"),
     new Manhwa("Solo Spell Caster", "https://www.solospellcaster.online/", "53", "(2/15/2023): ", "", "Unknown", "unknown-rating"),
     new Manhwa("Transcension Academy", "https://reaperscans.com/comics/6603-transcension-academy", "23", "(2/15/2023): ", "", "90", ""),
@@ -163,7 +171,7 @@ var manhwas = [
     new Manhwa("Leviathan", "https://leviathanmanga.com/", "Completed", "Completed: 215", "Kinda dark and scary", "90", "completed"),
     new Manhwa("Mookhyang The Origin", "href", "Completed", "Completed: 47", "Weird cliffhanger since it's a prequel", "87", "completed"),
     new Manhwa("I am the Sorcerer King", "https://thesorcererking.online/", "Completed", "Completed: 144", "", "90", "completed"),
-    new Manhwa("Solo Leveling", "https://leveling-solo.org/", "Completed (Main) | Side Story: 184", "Completed (main): 179", "New Side Stories!! (2/17/2023): 186", "96", "completed")
+    new Manhwa("Solo Leveling", "https://leveling-solo.org/", "Completed (Main) | Side Story: 184", "Completed (main): 179", "New Side Stories!! (2/22/2023): 186", "96", "completed")
 ];
 
 // Get a reference to the "manhwa-list" div
