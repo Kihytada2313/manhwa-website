@@ -24,13 +24,15 @@
             </div>
             <a href="#" id="menu-icon">&#9776;</a>
             <div id="dropdown-menu" style="display: none;">
-                <a id="close-button" style="display: none;">X</a>
-                <a href="./index.html">Home</a>
-                <a href="./manhwa.html">All Manhwa</a>
-                <a href="./about.html">About</a>
-                <!-- <a href="./login.php" id="login-link">Login</a>
-                <a href="./signup.php" id="signup-link">Signup</a>
-                <a href="./logout.php" id="logout-link">Logout</a> -->
+                <a id="close">X</a>
+                <div>
+                    <a id="top" href="./index.html">Home</a>
+                    <a href="./manhwa.html">All Manhwa</a>
+                    <a href="./about.html">About</a>
+                    <!-- <a href="./login.php" id="login-link">Login</a>
+                    <a href="./signup.php" id="signup-link">Signup</a>
+                    <a href="./logout.php" id="logout-link">Logout</a> -->
+                </div>
             </div>
         </nav>
     </header>
@@ -89,16 +91,16 @@
     <script src="footer.js"></script>
     <script>
     $(document).ready(function(){
+        // STANDARD FOR ALL PAGES DUE TO HEADER //
         // For dropdown Menu
         $("#menu-icon").click(function() {
             $("#dropdown-menu").slideToggle();
-            $("#menu-icon").hide();
         });
-        $("#dropdown-menu").mouseleave(function(){
-        $("#dropdown-menu").slideUp(function() {
-            $("#menu-icon").show();
-            });
+
+        $("#close").click(function() {
+            $("#dropdown-menu").slideToggle();
         });
+        // STANDARD FOR ALL PAGES DUE TO HEADER //
     });
     </script>
 </body>

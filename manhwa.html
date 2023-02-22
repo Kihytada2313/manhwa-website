@@ -24,835 +24,90 @@
             </div>
             <a href="#" id="menu-icon">&#9776;</a>
             <div id="dropdown-menu" style="display: none;">
-                <a href="./index.html">Home</a>
-                <a href="./manhwa.html">All Manhwa</a>
-                <a href="./about.html">About</a>
-                <!-- <a href="./login.php" id="login-link">Login</a>
-                <a href="./signup.php" id="signup-link">Signup</a>
-                <a href="./logout.php" id="logout-link">Logout</a> -->
+                <a id="close">X</a>
+                <div>
+                    <a id="top" href="./index.html">Home</a>
+                    <a href="./manhwa.html">All Manhwa</a>
+                    <a href="./about.html">About</a>
+                    <!-- <a href="./login.php" id="login-link">Login</a>
+                    <a href="./signup.php" id="signup-link">Signup</a>
+                    <a href="./logout.php" id="logout-link">Logout</a> -->
+                </div>
             </div>
         </nav>
     </header>
     <main>
         <div class="page-container">
-        <section id="all-manhwa">
-            <h2>All Manhwa</h2>
-            <div id="sort-reset-container">
-                <select id="sort-options">
-                    <option value="none">(Sort By)</option>
-                    <option value="alphabetical">Alphabetical</option>
-                    <option value="width-desc">Rating (High -> Low)</option>
-                    <option value="width-asc">Rating (Low -> High)</option>
-                </select>          
-                <button id="reset-button" class="btn-shine">
-                    <span>Reset (Recently Read)</span>
-                </button>
-            </div>
-            <div id="loading">Loading...</div>  
-            <div class="container">
-<!--
-                <a target="_blank" rel="noopener noreferrer" href="" class="item">
-                    <h3></h3>
-                    <p>Last Chapter Read: </p>
-                    <p>Notes: </p><p class="rating">Rating So Far: /100</p> DONT FORGET TO CHANGE WIDTH
-                    <div class="progress-bar">
-                        <div class="progress" style="width: %; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-            -->
-
-                <a target="_blank" rel="noopener noreferrer" href="https://mangakakalot.com/chapter/bu924860/chapter_141" class="item hiatus">
-                    <h3>Lurking in the City</h3>
-                    <p>Last Chapter Read: 140 (On Hiatus)</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 60/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 60%; height: 100%; background-color: #84ff99; border-radius: 5px;"></div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-sss-class-gacha-hunter/" class="item">
-                    <h3>SSS-Class Gacha Hunter</h3>
-                    <p>Last Chapter Read: 45</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 82/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 82%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://manhwatop.com/manga/invincible-sword-domain/" class="item">
-                    <h3>Invincible Sword Domain</h3>
-                    <p>Last Chapter Read: 110</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 55/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 55%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-doctors-rebirth/" class="item">
-                    <h3>Doctor's Rebirth</h3>
-                    <p>Last Chapter Read: 107</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 88/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 88%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-carnivorous-hunter/" class="item">
-                    <h3>Carnivorous Hunter</h3>
-                    <p>Last Chapter Read: 50</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 82/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 82%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.topmanhua.com/manhua/apocalyptic-thief/" class="item">
-                    <h3>Apocalyptic Thief</h3>
-                    <p>Last Chapter Read: 128</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 72/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 72%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.topmanhua.com/manhua/my-wife-is-actually-the-empress/" class="item">
-                    <h3>My Wife is Actually the Empress?</h3>
-                    <p>Last Chapter Read: 98</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 85/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://reaperscans.com/comics/1185-seoul-station-druid" class="item">
-                    <h3>Seoul Station Druid</h3>
-                    <p>Last Chapter Read: 85</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 77/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 77%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-drug-devourer/" class="item">
-                    <h3>Drug Devourer</h3>
-                    <p>Last Chapter Read: 20</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 85/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-my-daughter-is-a-dragon/" class="item">
-                    <h3>My Daughter is a Dragon!</h3>
-                    <p>Last Chapter Read: 40</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 77/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 74%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-super-evolution/" class="item">
-                    <h3>Super Evolution</h3>
-                    <p>Last Chapter Read: 86</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 66/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 66%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://aquamanga.com/read/they-say-im-the-future-king/" class="item unread">
-                    <h3>So They Prohesized, I’m the Future King</h3>
-                    <p>Last Chapter Read: 0</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 0/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 0%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://aquamanga.com/read/i-have-been-stuck-on-the-same-day-for-3000-years/" class="item unread">
-                    <h3>I’ve Been Trapped on the Same Day for Over 3000 Years</h3>
-                    <p>Last Chapter Read: 0</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 0/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 0%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-infinite-mage/" class="item">
-                    <h3>Infinite Mage</h3>
-                    <p>Last Chapter Read: 21</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 94/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 94%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://manhuaus.com/manga/monster-pet-evolution/" class="item">
-                    <h3>Monster Pet Evolution</h3>
-                    <p>Last Chapter Read: 22</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 68/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 68%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-pick-me-up-infinite-gacha/" class="item">
-                    <h3>Pick Me Up, Infinite Gacha</h3>
-                    <p>Last Chapter Read: 22</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 94/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 94%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://void-scans.com/manga/the-lazy-swordmaster/" class="item">
-                    <h3>The Lazy Swordmaster</h3>
-                    <p>Last Chapter Read: 33</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 75/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://en.leviatanscans.com/home/manga/tale-of-a-scribe-who-retires-to-the-countryside/" class="item">
-                    <h3>Tale of a Scribe Who Retires to the Countryside</h3>
-                    <p>Last Chapter Read: ~113</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 78/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 78%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://aquamanga.com/read/memorize/" class="item">
-                    <h3>Memorize</h3>
-                    <p>Last Chapter Read: 100</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 75/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://tomb-raiderking.com/" class="item">
-                    <h3>Tomb Raider King</h3>
-                    <p>Last Chapter Read: 348</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 84/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 84%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://reaperscans.com/comics/4450-past-life-returner" class="item">
-                    <h3>Past Life Regressor (2022)</h3>
-                    <p>Last Chapter Read: 19</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 86/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 86%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-dr-player/" class="item">
-                    <h3>Dr. Player</h3>
-                    <p>Last Chapter Read: 21</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 93/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 93%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-star-instructor-master-baek/" class="item">
-                    <h3>Star Instructor Master Baek</h3>
-                    <p>Last Chapter Read: ~2?</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 75/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-the-tutorial-is-too-hard/" class="item">
-                    <h3>The Tutorial is Too Hard</h3>
-                    <p>Last Chapter Read: 92</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 77/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 77%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-relife-player/" class="item">
-                    <h3>Relife Player</h3>
-                    <p>Last Chapter Read: 20</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 90/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-poison-eating-healer/" class="item">
-                    <h3>Poison-Eating Healer</h3>
-                    <p>Last Chapter Read: 20</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 89/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 89%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-boundless-necromancer/" class="item">
-                    <h3>Boundless Necromancer</h3>
-                    <p>Last Chapter Read: 7</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 89/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 89%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-the-live/" class="item">
-                    <h3>The Live</h3>
-                    <p>Last Chapter Read: 121</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 88/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 88%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://aquamanga.com/read/the-earth-savior-selection/" class="item">
-                    <h3>The Earth Savior Selection</h3>
-                    <p>Last Chapter Read: 55</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 89/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 89%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-to-hell-with-being-a-saint-im-a-doctor/" class="item">
-                    <h3>To Hell with being a Saint, I’m a Doctor</h3>
-                    <p>Last Chapter Read: 43</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 90/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-youngest-scion-of-the-mages/" class="item">
-                    <h3>Youngest Scion of the Mages</h3>
-                    <p>Last Chapter Read: 21</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 90/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="" class="item unread">
-                    <h3>Dungeons & Artifacts</h3>
-                    <p>Last Chapter Read: 0</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 0/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 0%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-ill-be-taking-a-break-for-personal-reasons/" class="item">
-                    <h3>I’ll Be Taking a Break for Personal Reasons</h3>
-                    <p>Last Chapter Read: 23</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 89/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 89%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-rise-from-the-rubble/" class="item">
-                    <h3>Rise from the Rubble</h3>
-                    <p>Last Chapter Read: 129</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 77/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 77%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-worlds-strongest-troll/" class="item">
-                    <h3>World’s Strongest Troll</h3>
-                    <p>Last Chapter Read: 12</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 92/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 92%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-demon-lords-martial-arts-ascension/" class="item">
-                    <h3>Demon Lord’s Martial Arts Ascension</h3>
-                    <p>Last Chapter Read: 24</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 89/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 89%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://manhuaus.com/manga/clever-cleaning-life-of-the-returned-genius-hunter/" class="item">
-                    <h3>Clever Cleaning Life of the Returned Genius Hunter</h3>
-                    <p>Last Chapter Read: 23</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 90/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://mangabtt.com/manga/heavenly-inquisition-sword-nine-heavens-swordmaster-46676" class="item">
-                    <h3>Nine Heavens Swordmaster</h3>
-                    <p>Last Chapter Read: 24</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 89/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 89%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://drakescans.com/series/plundering-the-heavens2/#" class="item">
-                    <h3>Plundering the Heavens</h3>
-                    <p>Last Chapter Read: 0</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 0/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 0%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-im-not-that-kind-of-talent/" class="item">
-                    <h3>I’m Not That Kind of Talent</h3>
-                    <p>Last Chapter Read: 11</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 93/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 93%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-life-of-a-magic-academy-mage/" class="item">
-                    <h3>Life of a Magic Academy Mage</h3>
-                    <p>Last Chapter Read: 17</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 82/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 82%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://elarcpage.com/series/reincarnation-of-the-murim-clans-former-ranker/" class="item">
-                    <h3>Reincarnation of the Murim Clan’s Former Ranker</h3>
-                    <p>Last Chapter Read: 70</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 85/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-i-regressed-to-my-ruined-family/" class="item">
-                    <h3>I Regressed to My Ruined Family</h3>
-                    <p>Last Chapter Read: 23</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 90/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-my-insanely-competent-underlings/" class="item">
-                    <h3>My Insanely Competent Underlings</h3>
-                    <p>Last Chapter Read: 13</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 89/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 89%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-reincarnation-of-the-strongest-sword-god/" class="item">
-                    <h3>Reincarnation of the Strongest Sword God</h3>
-                    <p>Last Chapter Read: 14</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 90/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-reaper-of-the-drifting-moon/" class="item">
-                    <h3>Reaper of the Drifting Moon</h3>
-                    <p>Last Chapter Read: 30</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 90/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-reincarnated-escort-warrior/" class="item">
-                    <h3>Reincarnated Escort Warrior</h3>
-                    <p>Last Chapter Read: 24</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 90/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-on-my-way-to-kill-god/" class="item">
-                    <h3>On My Way to Kill God</h3>
-                    <p>Last Chapter Read: 6</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 92/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 92%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-champions-path-to-murim/" class="item">
-                    <h3>Champion’s Path to Murim</h3>
-                    <p>Last Chapter Read: 22</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 89/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 89%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-never-die-extra/" class="item">
-                    <h3>Never Die Extra</h3>
-                    <p>Last Chapter Read: 21</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 92/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 92%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-worn-and-torn-newbie/" class="item unread">
-                    <h3>Worn and Torn Newbie</h3>
-                    <p>Last Chapter Read: 0</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 0/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 0%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-warrior-high-school-dungeon-raid-course/" class="item">
-                    <h3>Warrior High School</h3>
-                    <p>Last Chapter Read: 22</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 92/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 92%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-return-of-the-shattered-constellation/" class="item">
-                    <h3>Return of the Shattered Constellation</h3>
-                    <p>Last Chapter Read: 49</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 92/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 92%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-archmage-transcending-through-regression/" class="item">
-                    <h3>Archmage Transcending Through Regression</h3>
-                    <p>Last Chapter Read: 25</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 89/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 89%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-worthless-regression/" class="item">
-                    <h3>Worthless Regression</h3>
-                    <p>Last Chapter Read: 42</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 80/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-transmigrating-to-the-otherworld-once-more/" class="item">
-                    <h3>Transmigrating to the Otherworld Once More</h3>
-                    <p>Last Chapter Read: 30</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 90/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-the-greatest-estate-developer/" class="item">
-                    <h3>The Greatest Estate Developer</h3>
-                    <p>Last Chapter Read: 69</p>
-                    <p>Notes: Best Comedy.</p>
-                    <p class="rating">Rating So Far: 98/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 98%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://aquamanga.com/read/youngest-son-of-the-namgung-clan/" class="item">
-                    <h3>Youngest Son of the NamGung Clan</h3>
-                    <p>Last Chapter Read: 24</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 89/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 89%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.northernblade.online/" class="item">
-                    <h3>Legend of the Northern Blade</h3>
-                    <p>Last Chapter Read: 70</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 86/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-chronicles-of-the-martial-gods-return/" class="item">
-                    <h3>Chronicles Of The Martial God’s Return</h3>
-                    <p>Last Chapter Read: 45</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 91/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 91%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-helmut-the-forsaken-child/" class="item">
-                    <h3>Helmut: The Forsaken Child</h3>
-                    <p>Last Chapter Read: 27</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 88/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 88%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-existence/" class="item">
-                    <h3>Existence</h3>
-                    <p>Last Chapter Read: 7</p>
-                    <p>Notes: Best Intro Chapters.</p>
-                    <p class="rating">Rating So Far: 98/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 98%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://reaperscans.com/comics/2422-i-became-the-tyrant-of-a-defense-game" class="item">
-                    <h3>I Became the Tyrant of a Defense Game</h3>
-                    <p>Last Chapter Read: 17</p>
-                    <p>Notes: Great Start so far.</p>
-                    <p class="rating">Rating So Far: 93/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 93%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-my-school-life-pretending-to-be-a-worthless-person/" class="item">
-                    <h3>My School Life Pretending To Be a Worthless Person</h3>
-                    <p>Last Chapter Read: 23</p>
-                    <p>Notes: Got boring/repetitive after first 10 chapters.</p>
-                    <p class="rating">Rating So Far: 85/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-return-of-the-sss-class-ranker/" class="item">
-                    <h3>Return of the SSS-Class Ranker</h3>
-                    <p>Last Chapter Read: 18</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 92/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 92%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-standard-of-reincarnation/" class="item">
-                    <h3>Standard of Reincarnation</h3>
-                    <p>Last Chapter Read: 28</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 91/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 91%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-im-the-only-one-loved-by-the-constellations/" class="item unread">
-                    <h3>I’m the Only One Loved by the Constellations!</h3>
-                    <p>Last Chapter Read: 0</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 0/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 0%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-the-constellation-that-returned-from-hell/" class="item">
-                    <h3>The Constellation That Returned From Hell</h3>
-                    <p>Last Chapter Read: 111</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 92/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 92%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-my-path-to-killing-gods-in-another-world/" class="item">
-                    <h3>My Path to Killing Gods in Another World</h3>
-                    <p>Last Chapter Read: 0</p>
-                    <p>Notes: Didn't Like on first 2 chapters read in the past.</p>
-                    <p class="rating">Rating So Far: 0/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 0%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-                <a target="_blank" rel="noopener noreferrer" href="https://www.asurascans.com/manga/1672760368-absolute-sword-sense/" class="item">
-                    <h3>Absolute Sword Sense</h3>
-                    <p>Last Chapter Read: 11</p>
-                    <p>Notes: </p>
-                    <p class="rating">Rating So Far: 90/100</p> <!-- DONT FORGET TO CHANGE WIDTH -->
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%; height: 100%; background-color: #84ff99; border-radius: 5px;">
-                        </div>
-                    </div>
-                </a>
-
-        </section>
-    </div>
+            <section id="all-manhwa">
+                <h2><span>A</span><span>L</span><span>L</span>
+                    <span>M</span><span>A</span><span>N</span><span>H</span><span>W</span><span>A</span>
+                </h2>
+                <div id="color-scheme" style="text-align: center"><u>Color Scheme:</u> 
+                    <ul>
+                        <li>
+                            <div class='box red'></div>
+                            <p>= Hiatus</p>
+                        </li>
+                        <li>
+                            <div class='box yellow'></div>
+                            <p>= Unread</p>
+                        </li>
+                        <li>
+                            <div class='box orange'></div>
+                            <p>= Unknown Rating</p>
+                        </li>
+                        <li>
+                            <div class='box blue'></div>
+                            <p>= Completed Series</p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="sorting-header">
+                    <div id="center-options">
+                        <div class="search">
+                            <h3>Search By Title Name: </h3>
+                            <input type="text" id="search-input" placeholder="Type Here...">
+                        </div>
+                        <div id="sort-reset-container">
+                            <select id="sort-options">
+                                <option value="none">(Sort By)</option>
+                                <option value="alphabetical">Alphabetical</option>
+                                <option value="width-desc">Rating (High -> Low)</option>
+                                <option value="width-asc">Rating (Low -> High)</option>
+                            </select>          
+                            <button id="reset-button" class="btn-shine">
+                                <span>Reset (Recently Read)</span>
+                            </button>
+                        </div>
+                        <div id="loading">Loading...</div>
+                    </div>
+                    
+                </div>
+                
+                <div id="manhwa-list"></div>
+            </section>
+        </div>
     </main>
     <div id="footer"></div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- <script src="header.js"></script> -->
+    <script src="allmanhwa.js"></script>
     <script src="footer.js"></script>
     <script>
         $(document).ready(function(){
+            // STANDARD FOR ALL PAGES DUE TO HEADER //
             // For dropdown Menu
             $("#menu-icon").click(function() {
                 $("#dropdown-menu").slideToggle();
-                $("#menu-icon").hide();
-                $("#dropdown-menu").mouseleave(function(){
-                $("#dropdown-menu").slideUp(function() {
-                    $("#menu-icon").show();
-                    });
-                });
             });
-            
-            // For Sorting
+
+            $("#close").click(function() {
+                $("#dropdown-menu").slideToggle();
+            });
+            // STANDARD FOR ALL PAGES DUE TO HEADER //
+
+            // For Sorting (Exclusive to manhwa.html)
             var originalItems = $(".item").get();
             $("#sort-options").change(function() {
                 var option = $(this).val();
@@ -863,7 +118,7 @@
             });
 
             function resetItems() {
-                $(".container").empty().append(originalItems);
+                $("#manhwa-list").empty().append(originalItems);
                 $("#sort-options").val("none");
             }
             function sortItems(option) {
@@ -891,9 +146,33 @@
                 } else {
                     resetItems();
                 }
-                $(".container").empty().append(items);
+                $("#manhwa-list").empty().append(items);
                 $("#loading").hide(); // Hide loading icon
                 $("#sort-options").attr("disabled", false); // enable the sorting menu
+            }
+
+            // For the Search Function and updates count
+            const container = document.querySelector('#manhwa-list');
+            const searchInput = document.querySelector('#search-input');
+            const count = document.querySelector('#count');
+
+            searchInput.addEventListener('input', handleSearch);
+            function handleSearch() {
+                const query = searchInput.value.trim().toLowerCase();
+                const items = container.querySelectorAll('.item');
+
+                let visibleItems = 0;
+                items.forEach(item => {
+                    const title = item.querySelector('h3').textContent.trim().toLowerCase();
+
+                    if (title.includes(query)) {
+                        item.style.display = 'block';
+                        visibleItems++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                count.textContent = "Total Count: " + visibleItems;
             }
         });
 </script>
