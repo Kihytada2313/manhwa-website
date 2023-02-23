@@ -70,14 +70,23 @@
                         </div>
                         <div id="sort-reset-container">
                             <select id="sort-options">
-                                <option value="none">(Sort By)</option>
+                                <option value="default">(Sort By Title/Rating)</option>
                                 <option value="alphabetical">Alphabetical</option>
                                 <option value="width-desc">Rating (High -> Low)</option>
                                 <option value="width-asc">Rating (Low -> High)</option>
                             </select>          
+                            <select id="sort-by-class">
+                                <option value="default">(Sort By Class)</option>
+                                <option value="none">No Class</option>
+                                <option value="hiatus">Hiatus</option>
+                                <option value="unread">Unread</option>
+                                <option value="unknown-rating">Unknown Rating</option>
+                                <option value="completed">Completed Series</option>
+                            </select>
                             <button id="reset-button" class="btn-shine">
-                                <span>Reset (Recently Read)</span>
+                                <span>Reset (Clears Search and Filters)</span>
                             </button>
+                            
                         </div>
                         <div id="loading">Loading...</div>
                     </div>
@@ -113,14 +122,14 @@
                 var option = $(this).val();
                 sortItems(option);
             });
+            $("#sort-by-class").change(function() {
+                var option = $(this).val();
+                sortItemsByClass(option);
+            });
             $("#reset-button").click(function() {
                 resetItems();
             });
 
-            function resetItems() {
-                $("#manhwa-list").empty().append(originalItems);
-                $("#sort-options").val("none");
-            }
             function sortItems(option) {
                 $("#loading").show(); // Show loading icon
                 $("#sort-options").attr("disabled", true); // disable the sorting menu
@@ -151,6 +160,57 @@
                 $("#sort-options").attr("disabled", false); // enable the sorting menu
             }
 
+            function sortItemsByClass(option) {
+                $("#loading").show();
+                $("#sort-by-class").attr("disabled", true);
+                var items = $(".item");
+                if (option === "hiatus") {
+                    items.sort(function(a, b) {
+                    var classA = $(a).hasClass("hiatus");
+                    var classB = $(b).hasClass("hiatus");
+                    return classB - classA;
+                    });
+                } else if (option === "unread") {
+                    items.sort(function(a, b) {
+                    var classA = $(a).hasClass("unread");
+                    var classB = $(b).hasClass("unread");
+                    return classB - classA;
+                    });
+                } else if (option === "unknown-rating") {
+                    items.sort(function(a, b) {
+                    var classA = $(a).hasClass("unknown-rating");
+                    var classB = $(b).hasClass("unknown-rating");
+                    return classB - classA;
+                    });
+                } else if (option === "completed") {
+                    items.sort(function(a, b) {
+                    var classA = $(a).hasClass("completed");
+                    var classB = $(b).hasClass("completed");
+                    return classB - classA;
+                    });
+                } else if (option === "none") {
+                    items.sort(function(a, b) {
+                    var hasClass = function(item, className) {
+                        return $(item).hasClass(className);
+                    };
+                    var classA = hasClass(a, "hiatus") || hasClass(a, "unknown-rating") || hasClass(a, "completed") || hasClass(a, "completed");
+                    var classB = hasClass(b, "hiatus") || hasClass(b, "unknown-rating") || hasClass(b, "completed") || hasClass(b, "completed");
+                    return classB - classA;
+                    });
+                } else if (option === "all") {
+                    items.sort(function(a, b) {
+                    var textA = $(a).find("h3").text();
+                    var textB = $(b).find("h3").text();
+                    return textA.localeCompare(textB);
+                    });
+                } else {
+                    resetItems();
+                }
+                $("#manhwa-list").empty().append(items);
+                $("#loading").hide();
+                $("#sort-by-class").attr("disabled", false);
+            }
+
             // For the Search Function and updates count
             const container = document.querySelector('#manhwa-list');
             const searchInput = document.querySelector('#search-input');
@@ -173,6 +233,19 @@
                     }
                 });
                 count.textContent = "Total Count: " + visibleItems;
+            }
+
+            // Clears all Filters and Search Bar
+            function resetItems() {
+                $("#manhwa-list").empty().append(originalItems);
+                $("#sort-options").val("default");
+                $("#sort-by-class").val("default");
+                const items = container.querySelectorAll('.item');
+                items.forEach(item => {
+                    item.style.display = 'block';
+                });
+                count.textContent = "Total Count: " + items.length;
+                searchInput.value = '';
             }
         });
 </script>

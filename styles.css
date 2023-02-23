@@ -475,9 +475,11 @@ header .title a:hover {
     text-align: center;
 }
 
-#all-manhwa #sort-options {
+#all-manhwa #sort-options,
+#all-manhwa #sort-by-class {
     height: 30px;
     width: 150px;
+    margin: 10px;
 }
 
 #all-manhwa #sort-reset-container {
@@ -529,6 +531,7 @@ header .title a:hover {
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
+
 #reset-button {
     color: #9bf5df
 }
