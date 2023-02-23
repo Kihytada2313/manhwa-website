@@ -196,7 +196,7 @@ manhwas.forEach(function(manhwa) {
     a.appendChild(p1);
 
     var p2 = document.createElement("p");
-    p2.textContent = "Newest Chapter (2/17/2023): " + manhwa.newest_chapter;
+    p2.textContent = "Newest Chapter " + manhwa.newest_chapter;
     a.appendChild(p2);
 
     var p3 = document.createElement("p");
