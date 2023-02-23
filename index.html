@@ -6,7 +6,7 @@
     <title>Manhwa Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="dark-mode" data-theme="light">
     <header>
         <div class="title">
             <a href="./index.html" class="no-hover">
@@ -14,6 +14,13 @@
             </a>
         </div>
         <nav>
+            <div id="dark-mode-switch">
+                <h3>Light Mode?</h3>
+                <label class="switch center-in-container" for="dark-mode-toggle">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
             <div id="nav-options"> 
                 <a href="./index.html">Home</a>
                 <a href="./manhwa.html">All Manhwa</a>
@@ -41,24 +48,27 @@
             <h2>Top Manhwa</h2>
             <ul>
                 <li>
-                    <a class="box" href="./manhwa1.html">
+                    <a class="box" href="https://lightningdegree.com/">
                         <img src="./images/lightningdegree.jpg" alt="Manhwa 1">
                         <h3>Lightning Degree</h3>
+                        <p>Current Chapter: 132</p>
                         <p>Latest Chapter: 150</p>
                     </a>
                 </li>
                 <li>
-                    <a class="box" href="./manhwa1.html">
-                        <img src="./images/lightningdegree.jpg" alt="Manhwa 1">
-                        <h3>Lightning Degree</h3>
-                        <p>Latest Chapter: 150</p>
+                    <a class="box" href="https://leveling-solo.org/">
+                        <img src="./images/sololeveling.jpg" alt="Manhwa 1">
+                        <h3>Solo Leveling</h3>
+                        <p>Current Chapter: 184</p>
+                        <p>Latest Chapter: New Side Stories!! (2/22/2023): 186</p>
                     </a>
                 </li>
                 <li>
-                    <a class="box" href="./manhwa1.html">
-                        <img src="./images/lightningdegree.jpg" alt="Manhwa 1">
-                        <h3>Lightning Degree</h3>
-                        <p>Latest Chapter: 150</p>
+                    <a class="box" href="https://www.asurascans.com/manga/1672760368-return-of-the-mount-hua-sect/">
+                        <img src="./images/mounthuasect.png" alt="Manhwa 1">
+                        <h3>Return of the Mount Hua Sect</h3>
+                        <p>Current Chapter: 72</p>
+                        <p>Latest Chapter: 72.5</p>
                     </a>
                 </li>
             </ul>
@@ -68,19 +78,19 @@
             <h2>Latest 3 Currently Reading</h2>
             <ul>
                 <li>
-                    <h3>Manhwa 1 Title</h3>
-                    <p>Chapter 50</p>
-                    <a href="./manhwa1-chapter50.html">Read</a>
+                    <h3>1: TBD</h3>
+                    <p>Chapter ?</p>
+                    <a href="./manhwa.html">Read</a>
                 </li>
                 <li>
-                    <h3>Manhwa 2 Title</h3>
-                    <p>Chapter 25</p>
-                    <a href="./manhwa2-chapter25.html">Read</a>
+                    <h3>2: TBD</h3>
+                    <p>Chapter ?</p>
+                    <a href="./manhwa.html">Read</a>
                 </li>
                 <li>
-                    <h3>Manhwa 3 Title</h3>
-                    <p>Chapter 75</p>
-                    <a href="./manhwa3-chapter75.html">Read</a>
+                    <h3>3: TBD</h3>
+                    <p>Chapter ?</p>
+                    <a href="./manhwa.html">Read</a>
                 </li>
             </ul>
         </section>
@@ -99,6 +109,14 @@
 
         $("#close").click(function() {
             $("#dropdown-menu").slideToggle();
+        });
+
+        // Dark Mode
+        const darkModeToggle = document.querySelector('#dark-mode-toggle');
+            const body = document.querySelector('body');
+
+        darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
         });
         // STANDARD FOR ALL PAGES DUE TO HEADER //
     });

@@ -223,17 +223,15 @@ manhwas.forEach(function(manhwa) {
     var bar_color = "#ff3a3a";
     if (manhwa.rating == "Unknown") {
         bar_color = "#9bf5df";
-    } else if (manhwa.rating * 1 > 90) {
+    } else if (manhwa.rating*1 >= 90) {
         bar_color = "#81ff87";
-    } else if (80 <= manhwa.rating*1 < 90) {
+    } else if (80 <= manhwa.rating*1 && manhwa.rating*1 < 90) {
         bar_color = "#ccfd5a";
-    } else if (70 <= manhwa.rating*1 < 80) {
+    } else if (70 <= manhwa.rating*1 && manhwa.rating*1 < 80) {
         bar_color = "#fd9e68";
-    } else if (50 <= manhwa.rating*1 < 70) {
+    } else if (60 <= manhwa.rating*1 && manhwa.rating*1 < 70) {
         bar_color = "#f86a6a";
-    } else if (manhwa.rating*1 < 50) {
-        bar_color = "#fd3939";
-    } 
+    }
     div2.style.backgroundColor = bar_color;
     div2.style.borderRadius = "5px";
     div1.appendChild(div2);

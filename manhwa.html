@@ -6,7 +6,7 @@
     <title>Manhwa Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="dark-mode" data-theme="light">
     <header>
         <div class="title">
             <a href="./index.html" class="no-hover">
@@ -14,6 +14,13 @@
             </a>
         </div>
         <nav>
+            <div id="dark-mode-switch">
+                <h3>Light Mode?</h3>
+                <label class="switch center-in-container" for="dark-mode-toggle">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
             <div id="nav-options"> 
                 <a href="./index.html">Home</a>
                 <a href="./manhwa.html">All Manhwa</a>
@@ -83,11 +90,10 @@
                                 <option value="unknown-rating">Unknown Rating</option>
                                 <option value="completed">Completed Series</option>
                             </select>
-                            <button id="reset-button" class="btn-shine">
-                                <span>Reset (Clears Search and Filters)</span>
-                            </button>
-                            
                         </div>
+                        <button id="reset-button" class="btn-shine">
+                            <span>Reset (Clears Search and Filters)</span>
+                        </button>
                         <div id="loading">Loading...</div>
                     </div>
                     
@@ -113,6 +119,14 @@
 
             $("#close").click(function() {
                 $("#dropdown-menu").slideToggle();
+            });
+
+            // Dark Mode
+            const darkModeToggle = document.querySelector('#dark-mode-toggle');
+            const body = document.querySelector('body');
+
+            darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
             });
             // STANDARD FOR ALL PAGES DUE TO HEADER //
 
@@ -155,7 +169,7 @@
                 } else {
                     resetItems();
                 }
-                $("#manhwa-list").empty().append(items);
+                $("#manhwa-list").empty().append(items.fadeOut(200).fadeIn(200));
                 $("#loading").hide(); // Hide loading icon
                 $("#sort-options").attr("disabled", false); // enable the sorting menu
             }
@@ -206,7 +220,7 @@
                 } else {
                     resetItems();
                 }
-                $("#manhwa-list").empty().append(items);
+                $("#manhwa-list").empty().append(items.fadeOut(200).fadeIn(200));
                 $("#loading").hide();
                 $("#sort-by-class").attr("disabled", false);
             }
@@ -234,6 +248,12 @@
                 });
                 count.textContent = "Total Count: " + visibleItems;
             }
+
+            searchInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                this.blur(); // Blur the search input element
+            }
+            });
 
             // Clears all Filters and Search Bar
             function resetItems() {
