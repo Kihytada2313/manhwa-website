@@ -6,7 +6,7 @@
     <title>Manhwa Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark-mode" data-theme="light">
+<body>
     <header>
         <div class="title">
             <a href="./index.html" class="no-hover">
@@ -15,7 +15,7 @@
         </div>
         <nav>
             <div id="dark-mode-switch">
-                <h3>Light Mode?</h3>
+                <h3>Dark Mode?</h3>
                 <label class="switch center-in-container" for="dark-mode-toggle">
                     <input type="checkbox" id="dark-mode-toggle">
                     <span class="slider round"></span>
@@ -122,11 +122,20 @@
             });
 
             // Dark Mode
-            const darkModeToggle = document.querySelector('#dark-mode-toggle');
-            const body = document.querySelector('body');
-
-            darkModeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
+            const darkModeToggle = document.querySelector("#dark-mode-toggle");
+            // Check if dark mode is enabled in local storage and update the UI
+            if (localStorage.getItem("darkModeEnabled") === "true") {
+                document.body.classList.add("dark-mode");
+                darkModeToggle.checked = true;
+            }
+            darkModeToggle.addEventListener("change", () => {
+            if (darkModeToggle.checked) {
+                document.body.classList.add("dark-mode");
+                localStorage.setItem("darkModeEnabled", "true");
+            } else {
+                document.body.classList.remove("dark-mode");
+                localStorage.setItem("darkModeEnabled", "false");
+            }
             });
             // STANDARD FOR ALL PAGES DUE TO HEADER //
 

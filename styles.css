@@ -29,6 +29,10 @@ header {
     max-height: 100px;
     min-width: 300px;
 }
+#nav-options {
+    height: 80px;
+    line-height: 80px;
+}
 
 header a {
     color: white;
@@ -218,13 +222,13 @@ header .title a:hover {
     display: none;
 }
 
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 1120px) {
     #menu-icon {
         display: block;
     }
 }
 
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 1120px) {
     #nav-options {
         display: none;
     }
