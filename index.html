@@ -105,10 +105,12 @@
         // For dropdown Menu
         $("#menu-icon").click(function() {
             $("#dropdown-menu").slideToggle();
+            $("#menu-icon").hide();
         });
 
         $("#close").click(function() {
             $("#dropdown-menu").slideToggle();
+            $("#menu-icon").show();
         });
 
         // Dark Mode

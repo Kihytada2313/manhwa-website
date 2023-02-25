@@ -1,5 +1,5 @@
 html {
-    min-width: 600px;
+    min-width: 300px;
 }
 * {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -29,7 +29,7 @@ header {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     min-height: 100px;
     max-height: 100px;
-    min-width: 300px;
+    min-width: 400px;
 }
 #nav-options {
     height: 80px;
@@ -56,7 +56,7 @@ header h1 {
 header div a h1{
     color:rgb(255, 255, 255);
     font-family: "Comic Sans MS";
-    min-width: 300px;
+    min-width: 100px;
 }
 
 #dark-mode-switch h3 {
@@ -888,18 +888,29 @@ input:checked + .slider:before {
 
 @media screen and (max-width: 900px) {
     header h1 {
-        font-size: 28px;
+        font-size: 22px;
     }
+
     #dark-mode-switch h3 {
         font-size: 16px;
         text-align: end;
     }
+
     #all-manhwa h2 {
-        font-size: 26px;
+        font-size: 20px;
+    }
+
+    #all-manhwa h3,
+    #all-manhwa u {
+        font-size: 18px;
+    }
+
+    #all-manhwa p {
+        font-size: 16px;
     }
 
     #featured-manhwa,
     #latest-chapters {
-        min-width: 400px;
+        min-width: 150px;
     }
 }
