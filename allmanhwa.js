@@ -12,7 +12,7 @@ function Manhwa(title, href, last_chapter_read, newest_chapter, notes, rating, t
 // Create an array of Manhwa instances
 // Format = new Manhwa("Title", "href", last_chapter_read, newest_chapter, "notes", "rating", "rating_tag")
 var manhwas = [
-    // new Manhwa("Title", "href", "last_chapter_read", "newest_chapter", "notes", "rating", "rating_tag"),
+    new Manhwa("FFF-Class Trashero", "https://ww2.fff-classtrashero.com/", "43", "141", "Didn't actually read up to 43, i watched a YouTube summary that looked okay ", "85", ""),
     new Manhwa("I'm Stuck on the Same Day for a Thousand Years", "https://aquamanga.com/read/i-m-stuck-on-the-same-day-for-a-thousand-years/", "12", "(2/22/23): 14", "", "87", ""),
     new Manhwa("Moon-Shadow Sword Emperor", "https://flamescans.org/series/1677063722-moon-shadow-sword-emperor/", "20", "(2/22/23): 22", "", "89", ""),
     new Manhwa("Eternal Club", "https://realmscans.com/d1102/series/eternal-club/", "158", "158", "Cool concept, gets a bit repetitive but still interesting to see where it goes", "89", ""),
