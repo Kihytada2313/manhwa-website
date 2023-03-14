@@ -13,6 +13,8 @@ function Manhwa(title, href, last_chapter_read, newest_chapter, notes, rating, t
 // Format = new Manhwa("Title", "href", last_chapter_read, newest_chapter, "notes", "rating", "rating_tag")
 var manhwas = [
     // new Manhwa("", "", "", "(3/13/23): ", "", "", ""),
+    // new Manhwa("", "", "", "(3/13/23): ", "", "", ""),
+    new Manhwa("Trapped in a Webnovel as a Good-For-Nothing", "https://ww5.mangakakalot.tv/manga/manga-jo987097", "0", "(3/13/23): 127", "", "unread", ""),
     new Manhwa("The Duke's Redemption", "https://reaperscans.com/comics/3927-the-dukes-redemption", "0", "(3/13/23): 35", "", "0", "unread"),
     new Manhwa("Everyone Else is a Returnee", "https://www.asurascans.com/manga/everyone-else-is-a-returnee/", "25", "(3/13/23): 25", "", "89", ""),
     new Manhwa("Dangerous Dungeon Escape", "https://www.asurascans.com/manga/dangerous-dungeon-escape/", "0", "(3/13/23): 15.5 [Dropped on AsuraScans]", "", "0", "unread"),
@@ -21,7 +23,7 @@ var manhwas = [
     new Manhwa("I Have Become The Demonic Ancestor", "https://aquamanga.com/read/i-have-become-the-demonic-ancestor/", "31", "(3/13/23): 41", "", "79", ""),
     new Manhwa("I Used to be a Boss", "https://iusedtobeaboss.com/", "20", "(3/13/23): 21", "", "89", ""),
     new Manhwa("Divine Urban God", "https://aquamanga.com/read/divine-urban-god/", "51", "(3/13/23): 51", "Story generic and plot bad being overall kind of bad but okay reading if there's nothing else", "70", ""),
-    new Manhwa("Hard Carry Support", "https://reaperscans.com/comics/3913-hard-carry-support", "16", "(3/13/23): 16", "", "90", ""),
+    new Manhwa("Hard Carry Support", "https://reaperscans.com/comics/3913-hard-carry-support", "20", "(3/13/23): 20", "", "90", ""),
     new Manhwa("The Constellations are My Disciples", "https://cosmicscans.com/manga/the-constellations-are-my-disciples/", "16", "(3/13/23): 16", "", "89", ""),
     new Manhwa("FFF-Class Trashero", "https://ww2.fff-classtrashero.com/", "43", "(2/22/23): 141", "Didn't actually read up to 43, i watched a YouTube summary that looked okay ", "75", ""),
     new Manhwa("I'm Stuck on the Same Day for a Thousand Years", "https://aquamanga.com/read/i-m-stuck-on-the-same-day-for-a-thousand-years/", "12", "(2/22/23): 14", "", "87", ""),
