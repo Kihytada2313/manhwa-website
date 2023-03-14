@@ -14,7 +14,7 @@ function Manhwa(title, href, last_chapter_read, newest_chapter, notes, rating, t
 var manhwas = [
     // new Manhwa("", "", "", "(3/13/23): ", "", "", ""),
     // new Manhwa("", "", "", "(3/13/23): ", "", "", ""),
-    new Manhwa("Trapped in a Webnovel as a Good-For-Nothing", "https://ww5.mangakakalot.tv/manga/manga-jo987097", "0", "(3/13/23): 127", "", "unread", ""),
+    new Manhwa("Trapped in a Webnovel as a Good-For-Nothing", "https://ww5.mangakakalot.tv/manga/manga-jo987097", "0", "(3/13/23): 127", "", "0", "unread"),
     new Manhwa("The Duke's Redemption", "https://reaperscans.com/comics/3927-the-dukes-redemption", "0", "(3/13/23): 35", "", "0", "unread"),
     new Manhwa("Everyone Else is a Returnee", "https://www.asurascans.com/manga/everyone-else-is-a-returnee/", "25", "(3/13/23): 25", "", "89", ""),
     new Manhwa("Dangerous Dungeon Escape", "https://www.asurascans.com/manga/dangerous-dungeon-escape/", "0", "(3/13/23): 15.5 [Dropped on AsuraScans]", "", "0", "unread"),
