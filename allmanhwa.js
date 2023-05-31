@@ -276,6 +276,8 @@ manhwas.forEach(function(manhwa) {
         bar_color = "#fd9e68";
     } else if (60 <= manhwa.rating*1 && manhwa.rating*1 < 70) {
         bar_color = "#f86a6a";
+    } else if (manhwa.rating == "" || manhwa.rating*1 == 0) {
+        bar_color = "#707070"
     }
     div2.style.backgroundColor = bar_color;
     div2.style.borderRadius = "5px";
